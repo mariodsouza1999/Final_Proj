@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-bgimage
+  namespace: final
+data:
+    bg_image: https://testclo835.s3.amazonaws.com/bgimage3.jpg
+
+

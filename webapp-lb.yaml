@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-lb
+  labels:
+    app: example-app
+    name: simple-webapp-mysql
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 81
+    targetPort: 8080
+  selector:
+    app: example-app
+    name: simple-webapp-mysql
