@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
        - name: simple-webapp-mysql
-         image: 089664965210.dkr.ecr.us-east-1.amazonaws.com/cloud9:latest
+         image: 627483140334.dkr.ecr.us-east-1.amazonaws.com/clo835:7850fa60b7c883dfab8deee705e889855a5420be
          ports:
          - containerPort: 8080
          envFrom:
