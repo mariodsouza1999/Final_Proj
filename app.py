@@ -10,7 +10,7 @@ DB_Host = os.environ.get('DB_Host') or "localhost"
 DB_Database = os.environ.get('DB_Database') or "mysql"
 DB_User = os.environ.get('DB_User') or "root"
 DB_Password = os.environ.get('DB_Password') or "paswrd"
-bg_image = os.environ.get('bg_image') or "no image"
+Dg_image = os.environ.get('bg_image') or "no image"
 NAME =  os.environ.get('NAME')
 
 @app.route("/")
@@ -25,12 +25,12 @@ def main():
         color = '#ff3f3f'
         err_message = str(e)
 
-    return render_template('hello.html', debug="Environment Variables: DB_Host=" + (os.environ.get('DB_Host') or "Not Set") + "; DB_Database=" + (os.environ.get('DB_Database')  or "Not Set") + "; DB_User=" + (os.environ.get('DB_User')  or "Not Set") + "; DB_Password=" + (os.environ.get('DB_Password')  or "Not Set") + "; bg_image="  + (os.environ.get('bg_image') or "Not Set") + err_message, db_connect_result=db_connect_result, name=socket.gethostname(), color=color, bg_image=bg_image, NAME=NAME)
+    return render_template('hello.html', color=color, Dg_image=Dg_image, NAME=NAME)
 
 @app.route("/debug")
 def debug():
     color = '#2196f3'
-    return render_template('hello.html', debug="Environment Variables: DB_Host=" + (os.environ.get('DB_Host') or "Not Set") + "; DB_Database=" + (os.environ.get('DB_Database')  or "Not Set") + "; DB_User=" + (os.environ.get('DB_User')  or "Not Set") + "; DB_Password=" + (os.environ.get('DB_Password')  or "Not Set") + "; bg_image="  + (os.environ.get('bg_image') or "Not Set"), color=color)
+    return render_template('hello.html', color=color)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080)
