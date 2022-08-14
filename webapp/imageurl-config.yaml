@@ -4,7 +4,7 @@ metadata:
   name: config-bgimage
   namespace: final
 data:
-    bg_image: https://testclo835.s3.amazonaws.com/bgimage3.jpg
+    bg_image: https://cl835-fp.s3.amazonaws.com/1.jpg
     NAME: "Byungsub,Mario,Hasan,Adrian"
 
 
