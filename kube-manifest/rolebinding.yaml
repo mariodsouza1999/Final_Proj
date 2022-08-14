@@ -1,0 +1,13 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: finaladminbinding
+  namespace: final
+subjects:
+- kind: ServiceAccount
+  name: myaccount
+  apiGroup: ""
+roleRef:
+  kind: Role
+  name: finaladmin
+  apiGroup: ""
