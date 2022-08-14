@@ -5,5 +5,6 @@ metadata:
   namespace: final
 data:
     bg_image: https://testclo835.s3.amazonaws.com/bgimage3.jpg
+    NAME: "Byungsub,Mario,Hasan,Adrian"
 
 
