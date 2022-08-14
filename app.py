@@ -10,7 +10,7 @@ DB_Host = os.environ.get('DB_Host') or "localhost"
 DB_Database = os.environ.get('DB_Database') or "mysql"
 DB_User = os.environ.get('DB_User') or "root"
 DB_Password = os.environ.get('DB_Password') or "paswrd"
-Dg_image = os.environ.get('bg_image') or "no image"
+Bg_image = os.environ.get('Bg_image')
 NAME =  os.environ.get('NAME')
 
 @app.route("/")
@@ -25,7 +25,7 @@ def main():
         color = '#ff3f3f'
         err_message = str(e)
 
-    return render_template('hello.html', color=color, Dg_image=Dg_image, NAME=NAME)
+    return render_template('hello.html', color=color, Bg_image=Bg_image, NAME=NAME)
 
 @app.route("/debug")
 def debug():
